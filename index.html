@@ -5,6 +5,13 @@
   <head>
     <title>The Gallery of Horns</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script id="photo-template" type="text/x-handlebars-template">
+  <section>
+      <h2>{{title}}</h2>
+      <img src="{{image_url}}" alt="{{title}}">
+      <p>{{description}}</p>
+  </section>
+</script>
   </head>
   <body>
     <header>
@@ -19,15 +26,16 @@
       </select>
     </header>
     <main>
-      <section id="photo-template">
+      <!-- <section id="photo-template">
         <h2></h2>
         <img src="" alt="">
         <p></p>
-      </section>
+      </section> -->
     </main>
     <footer>
       &copy; 2018 Code Fellows
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.6.0/handlebars.js"></script>
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="

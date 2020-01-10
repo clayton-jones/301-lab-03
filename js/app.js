@@ -15,16 +15,19 @@ Image.allImages = [];
 let keywords = [];
 
 Image.prototype.render = function() {
+  console.log('render function')
 //   let template = $('#photo-template').html();
-  $('main').append('<section class="clone"></section>');
-  let imageClone = $('section[class="clone"]');
-  let imageHtml = $('#photo-template').html();
-  imageClone.html(imageHtml);
-  imageClone.find('h2').text(this.title);
-  imageClone.find('img').attr('src', this.url);
-  imageClone.find('p').text(this.description);
-  imageClone.removeClass('clone');
-  imageClone.attr('class', this.keyword);
+  let template = $('photo-template').html();
+  let templateRender = Handlebars.compile(template);
+  return templateRender(this);
+  // let imageClone = $('section[class="clone"]');
+  // let imageHtml = $('#photo-template').html();
+  // imageClone.html(imageHtml);
+  // imageClone.find('h2').text(this.title);
+  // imageClone.find('img').attr('src', this.url);
+  // imageClone.find('p').text(this.description);
+  // imageClone.removeClass('clone');
+  // imageClone.attr('class', this.keyword);
 };
 
 Image.readJson = (file) => {
@@ -33,23 +36,26 @@ Image.readJson = (file) => {
   // empties keyword array to prepare for new keywords
   keywords = [];
   $.get(file, 'json')
-    .then(data => {
-      console.log('data:', data);
-      data.forEach(item => {
-        Image.allImages.push(new Image(item));
-        if (!keywords.includes(item.keyword)) {
-          keywords.push(item.keyword);
-        }
-      });
-    })
-    .then(Image.loadImages)
-    .then(Image.appendKeywords);
+  .then(data => {
+    console.log('data:', data);
+    data.forEach(item => {
+      Image.allImages.push(new Image(item));
+      if (!keywords.includes(item.keyword)) {
+        keywords.push(item.keyword);
+      }
+    });
+  })
+  .then(Image.loadImages)
+  .then(Image.appendKeywords);
 };
 
 Image.loadImages = () => {
-  $('#photo-template').siblings().remove();
-  Image.allImages.forEach(image => image.render());
-};
+  $('section').remove();
+  console.log(Image.allImages)
+  Image.allImages.forEach(image => {
+    $('main').append(image.render());
+  });
+}
 
 Image.appendKeywords = () => {
   $('option').slice(2).remove();
