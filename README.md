@@ -45,6 +45,15 @@ Finish time: 8:01 pm
 
 Actual time needed to complete: 60 min
 
+Number and name of feature: Templating
+
+Estimate of time needed to complete: 60 min
+
+Start time: 8:05 pm
+
+Finish time: 9:15 pm
+
+Actual time needed to complete: 70 min
 
 ### How to Run the App
 From the terminal `open index.html` from root of the project.
