@@ -66,9 +66,9 @@ Estimate of time needed to complete: 20 min
 
 Start time: 4:37 pm
 
-Finish time: _____
+Finish time: 5:00 pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 23 min
 
 ### How to Run the App
 From the terminal `open index.html` from root of the project.
