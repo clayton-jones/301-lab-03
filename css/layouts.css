@@ -1,0 +1,20 @@
+h1 {
+  font-size: 40px;
+  font-family: 'Gayathri', sans-serif;
+  margin: 20px 0;
+}
+
+section {
+  background-color: rgba(91, 91, 116, 0.774);
+  border: 3px solid rgb(72, 72, 153);
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  margin: 8px 10px;
+  padding-top: 5px;
+}
+
+footer {
+  clear: both;
+  margin-top: 20px;
+}
