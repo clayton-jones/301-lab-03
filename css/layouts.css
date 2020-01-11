@@ -12,6 +12,7 @@ section {
   height: 200px;
   margin: 8px 10px;
   padding-top: 5px;
+  overflow: scroll;
 }
 
 footer {
