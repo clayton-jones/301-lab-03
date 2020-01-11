@@ -87,9 +87,9 @@ $(() => {
 $(() => {
   $('#page-nav button').on('click', (e) => {
       if (e.target.value === 'one') {
-        Image.readJson('../data/page-1.json');
+        Image.readJson('./data/page-1.json');
       } else {
-        Image.readJson('../data/page-2.json');
+        Image.readJson('./data/page-2.json');
       }
   })
 })
@@ -106,4 +106,4 @@ $(() => {
   })
 })
 
-$(() => Image.readJson('../data/page-1.json'));
+$(() => Image.readJson('./data/page-1.json'));
