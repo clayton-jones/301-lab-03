@@ -70,6 +70,17 @@ Finish time: 5:00 pm
 
 Actual time needed to complete: 23 min
 
+
+Number and name of feature: Sort Images
+
+Estimate of time needed to complete: 60 min
+
+Start time: 5:10 pm
+
+Finish time: 5:31 om
+
+Actual time needed to complete: ONLY 21 minutes!!! Crazy
+
 ### How to Run the App
 From the terminal `open index.html` from root of the project.
 ​

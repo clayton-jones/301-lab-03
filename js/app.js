@@ -35,7 +35,8 @@ Image.readJson = (file) => {
       }
     });
   })
-  .then(Image.loadImages)
+  .then(Image.sortByTitle)
+  // .then(Image.loadImages)
   .then(Image.appendKeywords);
 };
 
@@ -52,6 +53,24 @@ Image.appendKeywords = () => {
     let $option = $(`<option class="${key}">${key}</option>`);
     $('select').append($option);
   });
+};
+
+Image.sortByTitle = () => {
+  Image.allImages.sort((a, b) => {
+    if (a.title > b.title) {
+      return 1;
+  }
+  if (b.title > a.title) {
+      return -1;
+  }
+  return 0;
+  })
+  Image.loadImages();
+};
+
+Image.sortByHorns = () => {
+  Image.allImages.sort((a, b) => a.horns - b.horns);
+  Image.loadImages();
 };
 
 $(() => {
@@ -72,6 +91,18 @@ $(() => {
       } else {
         Image.readJson('../data/page-2.json');
       }
+  })
+})
+
+$(() => {
+  $('#sort-nav button').on('click', (e) => {
+    if (e.target.value === 'title') {
+      console.log('Sort by title clicked');
+      Image.sortByTitle();
+    } else {
+      console.log('Sort by horns clicked');
+      Image.sortByHorns();
+    }
   })
 })
 
