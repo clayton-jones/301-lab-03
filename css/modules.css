@@ -1,0 +1,33 @@
+section > img {
+  max-width: 150px;
+  max-height: 100px;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+
+section > p {
+  background-color: rgb(91, 91, 116);
+  border-radius: 5px;
+  padding: 5px 5px;
+  color: aliceblue;
+  height: 30px;
+  width: 90%;
+  margin: auto;
+  overflow: scroll;
+}
+
+section > h2 {
+  color: aliceblue;
+  margin: 10px 0;
+  font-size: 18px;
+  font-family: 'Gayathri', sans-serif;
+
+}
+
+select {
+  margin: 5px 0;
+  height: 25px;
+  border: 2px solid rgb(123, 123, 175);
+}

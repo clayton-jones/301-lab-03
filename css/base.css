@@ -1,0 +1,15 @@
+body {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+}

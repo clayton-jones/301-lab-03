@@ -25,6 +25,7 @@ Finish time: 1945
 
 Actual time needed to complete: 1hr 37min
 
+
 Number and name of feature: Filter Images
 
 Estimate of time needed to complete: 45 min
@@ -34,6 +35,8 @@ Start time: 2000
 Finish time: _____
 
 Actual time needed to complete: _____
+
+<!-- Lab 3 -->
 
 Number and name of feature: Pagination
 
@@ -45,6 +48,7 @@ Finish time: 8:01 pm
 
 Actual time needed to complete: 60 min
 
+
 Number and name of feature: Templating
 
 Estimate of time needed to complete: 60 min
@@ -54,6 +58,17 @@ Start time: 8:05 pm
 Finish time: 9:15 pm
 
 Actual time needed to complete: 70 min
+
+
+Number and name of feature: Styling with Flexbox
+
+Estimate of time needed to complete: 20 min
+
+Start time: 4:37 pm
+
+Finish time: _____
+
+Actual time needed to complete: _____
 
 ### How to Run the App
 From the terminal `open index.html` from root of the project.
